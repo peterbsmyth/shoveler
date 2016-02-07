@@ -1,4 +1,4 @@
-angular.module('shoveler.controllers', [])
+angular.module('shoveler.controllers')
 
 .controller('OwnerPostJobCtrl',['$scope',function($scope) {
 
