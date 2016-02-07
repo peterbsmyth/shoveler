@@ -5,24 +5,29 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
 
-    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
 
-    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <!-- compiled css output -->
     <link href="css/ionic.app.css" rel="stylesheet">
-    -->
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
+    <!-- ngCordova -->
+    <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
+
+    <!-- ngMap -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIhTS7pKHU2XdIINTUPNaWsv6WOC53lSU&libraries=geometry"></script>
+    <script src="lib/ngmap/build/scripts/ng-map.min.js"></script>
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
     <script src="js/controllers/HomeCtrl.js" charset="utf-8"></script>
     <script src="js/controllers/OwnerRegisterCtrl.js" charset="utf-8"></script>
     <script src="js/controllers/ShovelerRegisterCtrl.js" charset="utf-8"></script>
+    <script src="js/controllers/ShovelerMapCtrl.js" charset="utf-8"></script>
     <script src="js/controllers/OwnerPostJobCtrl.js" charset="utf-8"></script>
     <script src="js/services/services.js" charset="utf-8"></script>
   </head>

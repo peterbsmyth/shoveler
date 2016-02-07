@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('shoveler', ['ionic', 'shoveler.controllers'])
+angular.module('shoveler', ['ionic', 'shoveler.controllers', 'ngMap', 'ngCordova'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -32,7 +32,7 @@ angular.module('shoveler', ['ionic', 'shoveler.controllers'])
     controller: 'HomeCtrl'
   })
 
-  .state('ower_post_job', {
+  .state('owner_post_job', {
     url: '/owner/postjob',
     templateUrl: 'templates/owner_post_job.html',
     controller: 'OwnerPostJobCtrl'
@@ -48,6 +48,12 @@ angular.module('shoveler', ['ionic', 'shoveler.controllers'])
     url: '/shoveler/register',
     templateUrl: 'templates/shoveler_register.html',
     controller: 'ShovelerRegisterCtrl'
+  })
+
+  .state('shoveler_map', {
+    url: '/shoveler/map',
+    templateUrl: 'templates/shoveler_map.html',
+    controller: 'ShovelerMapCtrl'
   });
 
   $urlRouterProvider.otherwise('/home');

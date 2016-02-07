@@ -21,3 +21,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+// --- Map
+html, body, ion-content, ng-map {
+  height: 100%;
+}
