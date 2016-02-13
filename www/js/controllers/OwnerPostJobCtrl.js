@@ -4,8 +4,7 @@ angular.module('shoveler.controllers')
   $scope.job = {};
 
   $scope.submitForm = function() {
-    $scope.job.owner_id = Owner.getId();
-    console.log($scope.job);
+    $scope.job.owner = Owner.getId();
     Job.post($scope.job);
   };
 }]);
