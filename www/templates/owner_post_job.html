@@ -1,28 +1,31 @@
 <ion-view view-title="Post a Job">
   <ion-content class="">
-    <div class="list">
-        <label class="item item-input item-stacked-label">
-        <span class="input-label">Price</span>
-        <input type="tel" placeholder="$$">
-      </label>
-      <label class="item item-input item-stacked-label">
-        <span class="input-label">Notes</span>
-        <input type="textarea" placeholder="Details of the job a shoveler should know...">
-      </label>
-      <label class="item item-input item-select item-stacked-label">
-          <div class="input-label">
-            Yard Size
-          </div>
-          <select class="" name="">
-            <option value="">Small</option>
-            <option value="">Medium</option>
-            <option value="">Large</option>
-            <option value="">Extra Large</option>
-          </select>
+    <form name="ownerPostJobForm" ng-submit="submitForm()" novalidate>
+      <div class="list">
+          <label class="item item-input item-stacked-label">
+          <span class="input-label">Price</span>
+          <input type="tel" placeholder="$$" ng-model="job.price">
         </label>
-    </div>
-    <div class="padding">
-      <button class="button button-positive button-block" ui-sref="login">Post Job</button>
-    </div>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Notes</span>
+          <input type="textarea" placeholder="Details of the job a shoveler should know..." ng-model="job.notes">
+        </label>
+        <label class="item item-input item-select item-stacked-label">
+            <div class="input-label">
+              Driveway Size
+            </div>
+            <select class="" name="" ng-model="job.size">
+              <option value="">Choose Size</option>
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+              <option value="extra-large">Extra Large</option>
+            </select>
+          </label>
+      </div>
+      <div class="padding">
+        <button type="submit" class="button button-positive button-block">Post Job</button>
+      </div>
+    </form>
   </ion-content>
 </ion-view>
