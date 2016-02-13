@@ -1,29 +1,35 @@
 <ion-view view-title="Register as a Owner">
   <ion-content class="">
-    <div class="list">
+    <form name="ownerRegisterForm" ng-submit="submitForm(ownerRegisterForm)" novalidate>
+      <div class="list">
+          <label class="item item-input item-stacked-label">
+          <span class="input-label">First Name</span>
+          <input type="text" placeholder="Peter" name="firstName" ng-model="owner.firstName">
+        </label>
         <label class="item item-input item-stacked-label">
-        <span class="input-label">First Name</span>
-        <input type="text" placeholder="First Name">
-      </label>
-      <label class="item item-input item-stacked-label">
-        <span class="input-label">Last Name</span>
-        <input type="text" placeholder="Last Name">
-      </label>
-      <label class="item item-input item-stacked-label">
-        <span class="input-label">Street</span>
-        <input type="text" placeholder="123 Main St">
-      </label>
-      <label class="item item-input item-stacked-label">
-        <span class="input-label">City</span>
-        <input type="text" placeholder="Syracuse">
-      </label>
-      <label class="item item-input item-stacked-label">
-        <span class="input-label">State</span>
-        <input type="text" placeholder="NY">
-      </label>
-    </div>
-    <div class="padding">
-      <button class="button button-positive button-block" ui-sref="owner_post_job">Register</button>
-    </div>
+          <span class="input-label">Last Name</span>
+          <input type="text" placeholder="Smith" name="lastName" ng-model="owner.lastName">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Street</span>
+          <input type="text" placeholder="123 Main St" name="street" ng-model="owner.street">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">City</span>
+          <input type="text" placeholder="Oswego" name="city" ng-model="owner.city">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">State</span>
+          <input type="text" placeholder="NY" name="state" ng-model="owner.state">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Phone Number</span>
+          <input type="tel" placeholder="315-555-1234" name="phone" ng-model="owner.phone">
+        </label>
+      </div>
+      <div class="padding">
+        <button type="submit" class="button button-positive button-block">Register</button>
+      </div>
+    </form>
   </ion-content>
 </ion-view>
