@@ -39,13 +39,13 @@ angular.module('shoveler', ['ionic', 'shoveler.controllers', 'ngMap', 'ngCordova
   })
 
   .state('owner_register', {
-    url: '/owner/register',
+    url: '/signup/owner',
     templateUrl: 'templates/owner_register.html',
     controller: 'OwnerRegisterCtrl'
   })
 
   .state('shoveler_register', {
-    url: '/shoveler/register',
+    url: '/signup/shoveler',
     templateUrl: 'templates/shoveler_register.html',
     controller: 'ShovelerRegisterCtrl'
   })
