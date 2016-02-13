@@ -1,21 +1,23 @@
 <ion-view view-title="Register as a Shoveler">
   <ion-content class="">
-    <div class="list">
+    <form ng-submit="submitForm()" name="shovelerRegisterForm" novalidate>
+      <div class="list">
+          <label class="item item-input item-stacked-label">
+          <span class="input-label">First Name</span>
+          <input type="text" placeholder="First Name" ng-model="shoveler.firstName">
+        </label>
         <label class="item item-input item-stacked-label">
-        <span class="input-label">First Name</span>
-        <input type="text" placeholder="First Name">
-      </label>
-      <label class="item item-input item-stacked-label">
-        <span class="input-label">Last Name</span>
-        <input type="text" placeholder="Last Name">
-      </label>
-      <label class="item item-input item-stacked-label">
-        <span class="input-label">Age</span>
-        <input type="tel" placeholder="13+">
-      </label>
-    </div>
-    <div class="padding">
-      <button class="button button-positive button-block" ui-sref="shoveler_map">Register</button>
-    </div>
+          <span class="input-label">Last Name</span>
+          <input type="text" placeholder="Last Name" ng-model="shoveler.lastName">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Age</span>
+          <input type="tel" placeholder="13+" ng-model="shoveler.age">
+        </label>
+      </div>
+      <div class="padding">
+        <button type="submit" class="button button-positive button-block">Register</button>
+      </div>
+    </form>
   </ion-content>
 </ion-view>
