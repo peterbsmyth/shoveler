@@ -1,7 +1,19 @@
 <ion-view view-title="Map">
   <ion-content>
     <ng-map center="current-position" zoom="10" disable-default-u-i="true" data-tap-disabled="true" class="shoveler-map">
-      
+      <marker position="current-position" icon="{url: 'img/shovel_location@2x.png', scaledSize:[14,14]}"></marker>
     </ng-map>
+    <ion-slide-box class="shovel-box" show-pager="false">
+      <ion-slide ng-repeat="job in jobs">
+        <div class="row shovel-items">
+          <div class="col shovel-box-left">
+            <span>${{job.price}}</span>
+          </div>
+          <div class="col shovel-box-right">
+            <span>{{job.size}}</span>
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slide-box>
   </ion-content>
 </ion-view>

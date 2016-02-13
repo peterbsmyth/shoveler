@@ -22,6 +22,49 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "www/lib/ionic/scss/ionic";
 
 // --- Map
-html, body, ion-content, ng-map {
+ng-map {
+  display: block;
+  width: 100%;
   height: 100%;
+}
+
+.scroll {
+  height: 100%;
+}
+
+.shovel-box {
+  position: absolute;
+  text-align: center;
+  height: 80px;
+  width: 50%;
+  background: linear-gradient($positive, rgba(255,255,255,1.0));
+  // background-color: $positive;
+  color: #fff;
+  top: 50px;
+  left: 50%;
+  margin-left: -25%;
+  overflow-y: hidden;
+  border-radius: 25px;
+}
+
+.shovel-items {
+  height: 100%;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.shovel-box-left {
+  display:inline-block;
+  border-right: 3px solid white;
+  height: 100%;
+
+}
+
+span {
+  margin: 20px 0 0;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 3em;
+  color: blue;
+  font-family: Impact;
 }
