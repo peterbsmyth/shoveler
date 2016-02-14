@@ -9762,7 +9762,7 @@ ng-map {
   border-right: 3px solid white;
   height: 100%; }
 
-span {
+.shovel-items {
   margin: 20px 0 0;
   display: inline-block;
   vertical-align: middle;

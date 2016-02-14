@@ -10,10 +10,17 @@
       <div class="item">
         Address: {{job.owner.address}}
       </div>
+      <div class="item" ng-show="accepted">
+        Phone Number: {{job.owner.phone}}
+      </div>
+      <div class="item" ng-show="accepted">
+        Owner Name: {{job.owner.name}}
+      </div>
     </div>
     <form ng-submit="submitForm()" name="shovelerRegisterForm" novalidate>
       <div class="padding">
-        <button type="submit" class="button button-positive button-block">Accept Job</button>
+        <button type="submit" class="button button-positive button-block" ng-show="!accepted">Accept Job</button>
+        <button ng-disabled="accepted" class="button button-positive button-block" ng-show="accepted">Job Accepted! Get Shoveling!</button>
       </div>
     </form>
   </ion-content>

@@ -40,6 +40,9 @@ angular.module('shoveler.services', [])
         .then(function(response){
           return response.data;
         });
+      },
+      accept: function(jobId,shovelerId) {
+        return $http.post(API_BASE + 'jobs/accept/' + jobId, shovelerId);
       }
     };
   }
