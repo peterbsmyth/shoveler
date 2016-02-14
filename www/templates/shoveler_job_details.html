@@ -1,0 +1,20 @@
+<ion-view view-title="Job Info">
+  <ion-content class="">
+    <div class="list card">
+      <div class="item">
+        Price: ${{job.price}}
+      </div>
+      <div class="item">
+        Driveway: {{job.size}}
+      </div>
+      <div class="item">
+        Address: {{job.owner.address}}
+      </div>
+    </div>
+    <form ng-submit="submitForm()" name="shovelerRegisterForm" novalidate>
+      <div class="padding">
+        <button type="submit" class="button button-positive button-block">Accept Job</button>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

@@ -54,7 +54,14 @@ angular.module('shoveler', ['ionic', 'shoveler.controllers', 'shoveler.services'
     url: '/shoveler/map',
     templateUrl: 'templates/shoveler_map.html',
     controller: 'ShovelerMapCtrl'
+  })
+
+  .state('shoveler_job_details', {
+    url: '/shoveler/job_details/:jobId',
+    templateUrl: 'templates/shoveler_job_details.html',
+    controller: 'ShovelerJobDetailsCtrl'
   });
+
 
   $urlRouterProvider.otherwise('/home');
 

@@ -34,6 +34,12 @@ angular.module('shoveler.services', [])
 
           return $q.all(promises);
         });
+      },
+      getOne: function(jobId) {
+        return $http.get(API_BASE + 'jobs/' + jobId)
+        .then(function(response){
+          return response.data;
+        });
       }
     };
   }
