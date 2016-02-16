@@ -14,3 +14,5 @@ HackFrost submission
 4. Enter App ID `71056573`
 5. Enjoy
 
+## Companion Repo
+[Shoveler API](https://github.com/peterbsmith2/shoveler-api)
