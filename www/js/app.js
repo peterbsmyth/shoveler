@@ -67,4 +67,4 @@ angular.module('shoveler', ['ionic', 'shoveler.controllers', 'shoveler.services'
 
 })
 
-.constant('API_BASE','http://localhost:3210/api/');
+.constant('API_BASE','http://45.55.220.196/api/');
