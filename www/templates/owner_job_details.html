@@ -1,0 +1,24 @@
+<ion-view view-title="Job Info">
+  <ion-content class="">
+    <div class="list card">
+      <div class="item">
+        Price: ${{job.price}}
+      </div>
+      <div class="item">
+        Driveway: {{job.size}}
+      </div>
+      <div class="item" ng-show="!accepted">
+        Job Status: Job Not Accepted
+      </div>
+      <div class="item" ng-show="accepted">
+        Job Status: Job Accepted!
+      </div>
+    </div>
+    <form ng-submit="submitForm()" novalidate>
+      <div class="padding">
+        <button type="submit" class="button button-positive button-block" ng-show="!accepted">Refresh Job</button>
+        <button ng-disabled="accepted" class="button button-positive button-block" ng-show="accepted">Job Accepted! Expect a call!</button>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

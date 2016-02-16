@@ -20,9 +20,7 @@ angular.module('shoveler.services', [])
 
     return {
       post: function(job) {
-        $http.post(API_BASE + 'jobs/', job).then(function(response){
-          console.log(response);
-        });
+        return $http.post(API_BASE + 'jobs/', job);
       },
       get: function() {
         return $http.get(API_BASE + 'jobs/').then(function(response){
