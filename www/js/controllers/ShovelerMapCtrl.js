@@ -59,6 +59,7 @@ angular.module('shoveler.controllers')
          });
 
          addMarkerClick($scope.jobs[i]);
+         setShortSize($scope.jobs[i]);
 
 
         }
@@ -72,6 +73,18 @@ angular.module('shoveler.controllers')
         updateSelected(job);
         $ionicSlideBoxDelegate.slide(job.index);
       });
+    }
+
+    function setShortSize(job) {
+      if (job.size === 'small') {
+        job.sizeShort = 'S';
+      } else if (job.size === 'medium') {
+        job.sizeShort = 'M';
+      } else if (job.size === 'large') {
+        job.sizeShort = 'L';
+      } else {
+        job.sizeShort = 'XL';
+      }
     }
 
     function updateSelected(job) {
